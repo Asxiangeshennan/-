@@ -1,0 +1,77 @@
+/**
+
+
+
+ * Note: The returned array must be malloced, assume caller calls free().
+
+
+
+ */
+
+
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+
+
+
+    *returnSize=2;//返回的数组长度为2
+
+
+
+    int *res=(int *)malloc(sizeof(int)**returnSize);//分配两个int大小的内存，相当于res[2]
+
+
+
+    int k=0;//res存放位置的指针
+
+
+
+//暴力解法
+
+
+
+    for(int i=0;i<numsSize;i++){
+
+
+
+        for(int j=i+1;j<numsSize;j++){
+
+
+
+//找到就把i，j的位置存进去
+
+
+
+            if(nums[i]+nums[j]==target){
+
+
+
+//k先存再加
+
+
+
+                res[k++]=i;
+
+
+
+                res[k++]=j;
+
+
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
+    return res;
+
+
+
+}
