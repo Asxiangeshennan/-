@@ -1,0 +1,4 @@
+//直接返回两个整数相加的和
+int sum(int num1, int num2) {
+    return num1 +num2;
+}
